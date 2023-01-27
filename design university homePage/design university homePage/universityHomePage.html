@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Brainware University</title>
+
+    <style>
+        .flexBox {
+            display: flex;
+        }
+
+        .borderRight {
+            border-right: 2px solid rgb(134, 134, 134);
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 10px 0 0 0;
+            padding: 0;
+        }
+
+        /* top row */
+        #topRow {
+            background-color: rgb(18, 52, 202);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            padding: 0 50px 0 50px;
+        }
+
+        #logo {
+            height: 64px;
+            width: 192px;
+        }
+
+        #topRow ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #topRow ul li {
+            font-size: 20px;
+            color: #fff;
+            padding: 0 0 0 20px;
+        }
+
+        /* nav bar */
+        .navBar {
+            padding: 0 50px 0 0;
+            height: 60px;
+            box-shadow: 0 5px 5px grey;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navBar ul {
+            list-style: none;
+        }
+
+        .navBar ul li {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            height: 25px;
+            padding: 0 10px 0 10px;
+            color: rgb(18, 52, 202);
+            border-right: 1px solid black;
+        }
+
+        .navBar div {
+            width: 200px;
+            justify-content: space-between;
+        }
+
+        .navBar div img {
+            height: 32px;
+            width: 35px;
+        }
+
+        .navBar div button {
+            height: 40px;
+            width: 120px;
+            background: #fab91d;
+            padding: 3px 15px;
+            color: #0f3db8;
+            border: none;
+            border-radius: 15px;
+            font-weight: 900;
+            transition: 0.5s;
+        }
+
+        .navBar div button:hover {
+
+            background: rgb(54, 255, 47);
+        }
+
+        /* image section */
+        .bgImg img {
+            height: 450px;
+            width: 100%;
+        }
+
+        /* award section */
+        .awards-container {
+            justify-content: center;
+        }
+
+        .awards {
+            position: relative;
+            top: -40px;
+            width: 1200px;
+            height: 200px;
+            background-color: #f2f2f2;
+
+        }
+
+        .awards ul {
+            list-style: none;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .awards ul li {
+            color: #0f3db8;
+            padding: 0 5px 50px 5px;
+            height: 100px;
+            width: 270px;
+            align-items: center;
+        }
+
+        .awards ul li img {
+            height: 60px;
+            width: 60px;
+        }
+
+        .awards ul li p {
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- top bar -->
+    <div id="topRow">
+        <!-- logo -->
+        <img id="logo" src="./bwu-logo.webp" alt="">
+        <ul>
+            <li>OVERVIEW</li>
+            <li>WHY CHOOSE US</li>
+            <li>PLACEMENT</li>
+        </ul>
+    </div>
+
+    <!-- nav bar -->
+    <div class="navBar flexBox">
+        <ul class="flexBox">
+            <li>HOME</li>
+            <li>ABOUT US</li>
+            <li>ADMISSIONS</li>
+            <li>RESEARCH</li>
+            <li>INNOVATIONS</li>
+            <li>STUDENTS</li>
+            <li>PLACEMENT</li>
+        </ul>
+        <div class="flexBox">
+            <img src="./search.png" alt="">
+            <button>APPLY NOW</button>
+        </div>
+    </div>
+
+    <!-- background image -->
+    <div class="bgImg">
+        <img src="./best-private-university-awarded.webp" alt="">
+    </div>
+    <div class="flexBox awards-container">
+        <div class="awards flexBox">
+            <ul class="flexBox">
+                <li class="borderRight">
+                    <center>
+                        <img src="./academic-excellence.svg" alt="">
+                        <h3>Academic-excellence</h3>
+                        <p>Since 1990</p>
+                    </center>
+
+                </li>
+                <li class="borderRight">
+                    <center>
+                        <img src="./Infrastructure.svg" alt="">
+                        <h3>State-of-the-art infrastructure</h3>
+                        <p>Labs, library, workshops</p>
+                    </center>
+
+                </li>
+                <li class="borderRight">
+                    <center>
+                        <img src="./scholarships.svg" alt="">
+                        <h3>Scholarships</h3>
+                        <p>₹15 crores awarded</p>
+                    </center>
+
+                </li>
+                <li>
+                    <center>
+                        <img src="./record-placement.svg" alt="">
+                        <h3>Record placement</h3>
+                        <p>98% placed in 2022</p>
+                    </center>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

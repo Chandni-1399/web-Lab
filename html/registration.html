@@ -1,0 +1,121 @@
+<!-- registration form with style -->
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        input {
+            height: 30px;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            font-family: sans-serif;
+        }
+        
+        button {
+            font-size: 15px;
+            height: 30px;
+            width: 80px;
+            color: white;
+            background-color: rgb(0, 164, 36);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .warning {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form id="from" action="" onsubmit="return validateForm()">
+            <label style="font-size: 30px;">SignUp</label><br><br>
+
+            <label for="fname">First name</label><br>
+            <input type="text" id="fname">
+            <label class="warning" id="fw"></label><br>
+            <!-- an epty label for warning message | same for rest -->
+
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname">
+            <label class="warning" id="lw"></label><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email">
+            <label class="warning" id="ew"></label><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password">
+            <label class="warning" id="pw"></label><br>
+
+            <label for="conf-password">Confirm password</label><br>
+            <input type="password" id="conf-password">
+            <label class="warning" id="cpw"></label><br>
+
+            <button id="signUpBtn">SignUp</button>
+        </form>
+    </div>
+
+
+    <script>
+        let fName = document.getElementById('fname');
+        let fw = document.getElementById('fw');
+        let lName = document.getElementById('lname');
+        let lw = document.getElementById('lw');
+        let email = document.getElementById('email');
+        let ew = document.getElementById('ew');
+        let password = document.getElementById('password');
+        let pw = document.getElementById('pw');
+        let confPassword = document.getElementById('conf-password');
+        let cpw = document.getElementById('cpw');
+
+        // you don't have to remember this, you can get it from google, just search for "email validation pattern"
+        const email_pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        function validateForm() {
+            if (fName.value.length < 3) {
+                fw.innerHTML = "Invalid name"
+                return false;
+            } else {
+                fw.innerHTML = "" // this will remove warning message | same for rest
+            }
+            if (lName.value.length < 3) {
+                lw.innerHTML = "Invalid last name"
+                return false;
+            } else {
+                lw.innerHTML = ""
+            }
+            if (!email_pattern.test(email.value)) {
+                ew.innerHTML = "Invalid email"
+                return false;
+            } else {
+                ew.innerHTML = ""
+            }
+            if (password.value.length < 6) {
+                pw.innerHTML = "Password must be 6 char"
+                return false;
+            } else {
+                pw.innerHTML = ""
+            }
+            if (password.value !== confPassword.value) {
+                cpw.innerHTML = "Password is not same"
+                return false;
+            } else {
+                cpw.innerHTML = ""
+            }
+            return true
+        }
+    </script>
+</body>
+
+</html>
