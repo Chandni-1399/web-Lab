@@ -1,0 +1,17 @@
+    .change {
+        font-size: 100px;
+        font-weight: bold;
+    }
+    
+    .bg-img {
+        background-image: url(../html/pexels-airam-datoon-15186505.jpg);
+        height: 200px;
+        width: 200px;
+        padding-left: 350px;
+    }
+    
+    .title {
+        font-size: 23px;
+        font-weight: 900;
+        padding-left: 5px;
+    }
